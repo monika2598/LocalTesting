@@ -31,6 +31,14 @@ class EmailValidatorTest {
     fun testInvalidEmailNoAtSymbol() {
         assertFalse(EmailValidator.isValidEmail("testing123"))
     }
+    @Test
+    fun testInvalidEmailEmptyString() {
+        assertFalse(EmailValidator.isValidEmail(""))
+    }
 
+    @Test
+    fun testInvalidEmailNull() {
+        assertFalse(EmailValidator.isValidEmail(null))
+    }
 
 }
