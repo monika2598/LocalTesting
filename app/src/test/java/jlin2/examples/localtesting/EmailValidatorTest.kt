@@ -18,6 +18,10 @@ class EmailValidatorTest {
     fun testInvalidEmailMissingDomain() {
         assertFalse(EmailValidator.isValidEmail("123@abc"))
     }
+    @Test
+    fun testInvalidEmailDoubleDots() {
+        assertFalse(EmailValidator.isValidEmail("123@abc..com"))
+    }
 
 
 }
